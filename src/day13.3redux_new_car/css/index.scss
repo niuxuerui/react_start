@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,
+body,
+#root,
+.router,
+.wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+a{
+    color:#000;
+}
+.wrap{
+    position: relative;
+    .header{
+        border-bottom: 1px solid #ccc;
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgb(255, 0, 149);
+        color:#fff;
+    }
+    .content{
+        position: absolute;
+        left: 0;
+        top:40px;
+        width: 100%;
+        height: calc(100% - 80px);
+        overflow-y:auto;
+        .list,
+        .car{
+       
+            width: 100%;
+            li{
+                padding:20px 0;
+                border-bottom:1px solid #ccc;
+                .info{
+                   
+                    h3{
+                        // text-indent: 20px;
+                    }
+                    .jian{
+                        margin-left:100px;
+                    }
+                    .addcar{
+                        margin-left:100px;
+                    }
+                }
+            }
+            .carConent{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height:calc(100% - 40px) ;   
+                overflow-y:auto;
+            }
+            .allChecked{
+                position: absolute;
+                left: 0;
+                bottom:0;
+               border-top:1px solid #ccc;
+               background: rgb(0, 255, 149);
+               width: 100%;
+               height: 40px;
+               line-height: 40px;
+               .sumprice{
+                   margin-left: 160px;
+               }
+            }
+        }
+      
+    }
+    .bottom{
+        position: absolute;
+        left: 0;
+        bottom:0;
+        width: 100%;
+        border-top:1px solid #ccc;
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        a{
+            flex:1;
+            text-align: center;
+        }
+
+    }
+}
+
+
+.detail{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .detailHeader{
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 26px;
+    }
+    .detailTop{
+     flex: 1;
+     width: 100%;
+     height: 100px;
+     overflow: hidden;
+    }
+    .detailBottm{
+        display: flex;
+        height: 40px;
+        .detailsum{
+           flex-grow: 0;
+           width: 40px;
+           height: 40px;
+            background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkZFNzhCMUFDNDNEMTFFNkExODNBQ0E0NDg3QzI5OUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkZFNzhCMUJDNDNEMTFFNkExODNBQ0E0NDg3QzI5OUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCMTQ5RTEwQkM0M0QxMUU2QTE4M0FDQTQ0ODdDMjk5RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCMTQ5RTEwQ0M0M0QxMUU2QTE4M0FDQTQ0ODdDMjk5RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgKukdEAAACzSURBVHja7JnBDcMgDEXjKkskC3iWzNEuzQBtugU1Va6hHFwFo2fpB07Wk+UPIpac8xQp5vJR1Rq19ACaUvqutylYzJUqdtkr4SoMMMAnpqtFL+aTYSt89cWRMR3AAAMMMMAAAwwwwADzpqPCYd90mA5gjrWLYrxfVTJCD2+m16HNkaM5r5Sxl6q2Ji4Jl2O/m1Yn4J95PaZI8k9zebXEw/Q2PU13R8jmvBJtEhruWPsIMABi/iNEc+SxSQAAAABJRU5ErkJggg==") no-repeat ;
+            background-size:100% 100%;
+        }
+        .backCar{
+            flex-grow: 0;
+            width: calc(100% - 40px);
+            height: 40px;
+        }
+    }
+}

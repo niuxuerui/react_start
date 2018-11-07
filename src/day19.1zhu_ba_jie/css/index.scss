@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+// p,
+// h3,
+// h4{
+// margin: 0;
+// padding: 0;
+// }
+a{
+    color:#000;
+    text-decoration: none;
+}
+html,
+body,
+#root,
+.wrap,
+.index{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box{
+    width: 800px;
+    height: 230px;
+    border:1px solid #ccc;
+    .header{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: #fff;
+        border-bottom:1px solid #ccc;
+        display: flex;
+        align-items: center;
+        >div{
+            flex-grow:0;
+           width: 100px;
+           line-height: 20px;
+           text-align: center;
+            height: 20px;
+           border:1px solid #ccc;
+           margin: 0 20px;
+        }
+        .leixing,
+        .lingyu{
+            border:1px solid orange;
+        }
+    }
+    .zi{
+        position: relative;
+       width: 100%;
+       height: 60px;
+       line-height: 60px;
+       border-bottom:1px dashed #ccc;
+       display: flex;
+       .biao{
+         flex-grow: 0;
+         width: 100px;
+         height: 60px;
+         line-height: 60px;
+         background: #eee;
+         text-align: center;
+       }
+       .pos{
+           position: absolute;
+           right: 0;
+           top:0;
+           height: 100%;
+           width:calc(100% - 100px);
+           b{
+               margin: 0 20px;
+           }
+       }
+    }
+    .li{
+        position: relative;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        border-bottom:1px dashed #ccc;
+        display: flex;
+        .biao{
+            flex-grow: 0;
+            width: 100px;
+            height: 60px;
+            line-height: 60px;
+            background: #eee;
+            text-align: center;
+          }
+          .pos{
+            position: absolute;
+            right: 0;
+            top:0;
+            height: 100%;
+            width:calc(100% - 100px);
+            b{
+                margin: 0 20px;
+            }
+        }
+    }
+    .suo{
+        position: relative;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        display: flex;
+        .biao{
+          flex-grow: 0;
+          width: 100px;
+          height: 60px;
+          line-height: 60px;
+          background: #eee;
+          text-align: center;
+        }
+        .pos{
+            position: absolute;
+            right: 0;
+            top:0;
+            height: 100%;
+            width:calc(100% - 100px);
+            overflow-x:auto;
+            b{
+                margin: 0 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/*
+1.变量
+2.@mixin       不带参数的，带参数的，参数带默认值的
+  @include
+  模块化外链     @import 引用外部文件
+3.自定义函数
+  @function
+  函数名
+  自定义的函数  
+  @function（参数）{
+    条件语句
+    循环语句
+  }
+4.% 占位符
+5.继承
+*/
+/*自定义函数*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+html, body,
+#root,
+.wrap,
+.index {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+}
+
+.index .header {
+  width: 100%;
+  height: 1.06667rem;
+  line-height: 1.06667rem;
+  border-bottom: 1px solid  #ccc;
+  text-align: center;
+}
+
+.index .content {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.index .content .indexCt {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.index .footer {
+  width: 100%;
+  height: 1.06667rem;
+  line-height: 1.06667rem;
+  border-top: 1px solid  #ccc;
+  display: flex;
+}
+
+.index .footer a {
+  flex: 1;
+  text-align: center;
+}
+
+.index .footer a.active {
+  color: pink;
+}
